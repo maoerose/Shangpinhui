@@ -3,10 +3,13 @@
 import axios from 'axios'
 // 使用element-ui Message做消息提醒
 import { Message} from 'element-ui';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 //1. 创建新的axios实例，
 const service = axios.create({
   // 公共接口--这里注意后面会讲
-  baseURL: process.env.BASE_API,
+  // baseURL: process.env.BASE_API,
+  baseURL: 'http://gmall-h5-api.atguigu.cn/api',
   // 超时时间 单位是ms，这里设置了20s的超时时间
   timeout: 20 * 1000
 })
@@ -18,12 +21,13 @@ service.interceptors.request.use(config => {
 //      'Content-Type':'application/x-www-form-urlencoded' //配置请求头
 //    }
    //注意使用token的时候需要引入cookie方法或者用本地localStorage等方法，推荐js-cookie
-   const token = getCookie('名称');//这里取token之前，你肯定需要先拿到token,存一下
-   if(token){
-      config.params = {'token':token} //如果要求携带在参数中
-      config.headers.token= token; //如果要求携带在请求头中
-    }
-  return config
+  //  const token = getCookie('名称');//这里取token之前，你肯定需要先拿到token,存一下
+  //  if(token){
+  //     config.params = {'token':token} //如果要求携带在参数中
+  //     config.headers.token= token; //如果要求携带在请求头中
+  //   }
+    NProgress.start();
+    return config
 }, error => {
   Promise.reject(error)
 })
@@ -31,6 +35,7 @@ service.interceptors.request.use(config => {
 // 3.响应拦截器
 service.interceptors.response.use(response => {
   //接收到响应数据并成功后的一些共有的处理，关闭loading等  
+  NProgress.done();
   return response
 }, error => {
    /***** 接收到异常响应的处理开始 *****/

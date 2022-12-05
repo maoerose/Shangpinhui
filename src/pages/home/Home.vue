@@ -1,9 +1,10 @@
 <!--  -->
 <template>
-    <div>我是主页</div>
+    <NavType></NavType>
 </template>
 
 <script>
+import NavType from '../../components/navType/NavType.vue';
 export default {
     name: "Home",
     data () {
@@ -11,11 +12,13 @@ export default {
         };
   },
 
-    components: {},
+    components: {
+        NavType
+    },
 
     computed: {},
 
-    mounted: {},
+    // mounted: {},
 
     methods: {}
 }

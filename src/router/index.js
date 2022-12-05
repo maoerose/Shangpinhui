@@ -1,5 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 // import * as VueRouter from 'vue-router'
 // import {CreateRouter,createWebHistory} from 'vue-router';
 
@@ -39,4 +41,14 @@ const router = new VueRouter({
 })
 
 
-export default router
+export default router;
+
+
+router.beforeEach((to,form,next) => {
+    NProgress.start()
+    next()
+})
+
+router.afterEach(() => {
+    NProgress.done()
+})

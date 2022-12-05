@@ -4,3 +4,7 @@ import http from '../utils/http'
 export function login(params){
     return http.post('/login',params)
 }
+
+export function getCategories(){
+    return http.get('/product/getBaseCategoryList')
+}
