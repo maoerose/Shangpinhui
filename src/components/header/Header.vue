@@ -4,8 +4,8 @@
         <div class="container">
             <div class="left">
                 <span>北京，尚品汇欢迎你</span>
-                <a href="" class="login">请登录</a>
-                <a href="" class="register">请注册</a>
+                <router-link to="/login" class="login">请登录</router-link>
+                <router-link to="/register" class="register">请注册</router-link>
             </div>
             <div class="right">
                 <ul>
