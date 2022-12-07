@@ -1,8 +1,8 @@
 <!--  -->
 <template>
-    <!-- <div class="banner"> -->
+<div class="banner">
         <!-- <img src="./images/lol英雄联盟至尊 魔女 莫.jpg" alt=""> -->
-    <slider animation="normal">
+    <slider animation="fade" :style="{width: '900px',height: '600px'}">
         <!-- <img src="./images/lol英雄联盟至尊 魔女 莫.jpg" alt=""> -->
         <slider-item v-for="(url,index) in imgList" :key="index">
             <img :src="url" alt="">
@@ -16,7 +16,7 @@
                 <img :src="url" alt="">
             </SplideSlide>
         </Splide> -->
-    <!-- </div> -->
+</div>
 </template>
 
 <script>
@@ -25,7 +25,8 @@ export default {
     data () {
     return {
         imgList:[
-            './images/lol英雄联盟至尊 魔女 莫.jpg'
+            'https://xdao.mypinata.cloud/ipfs/QmaPZHpjvZhuQHBuwAF7ms86QMQPmfCTjoG9B8tEX8ydv2',
+            'https://xdao.mypinata.cloud/ipfs/QmfA6GGBKS88sSbH8uYvDtuiipQ4wNaGmyDsmosxWCwAzB'
           ]
         };
   },
@@ -43,10 +44,10 @@ export default {
 
 </script>
 <style lang='less' scoped>
-// .banner{
-//     img{
-//         width: 900px;
-//         height: 700px;
-//     }
-// }
+.banner{
+    img{
+        width: 900px;
+        height: 700px;
+    }
+}
 </style>
