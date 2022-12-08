@@ -31,17 +31,22 @@
                 </ul>
             </div> -->
       <div class="oneNav">
-        <div v-for="(c1, index) in this.tableData" :key="index" @mousemove="mouseOver(index)" @mouseleave="mouseLeave" class="oneNavList" :style="{ backgroundColor: currentIndex == index ? '#23c9fc' : '#f9f9f9' }">
-          <a href="" class="oneNavA">{{ c1.categoryName }}</a>
+        <div v-for="(c1, index) in this.tableData" 
+        :key="index" @mousemove="mouseOver(index)" 
+        @mouseleave="mouseLeave" 
+        class="oneNavList" 
+        :style="{ backgroundColor: currentIndex == index ? '#23c9fc' : '#f9f9f9' }" 
+        @click="goSearch($event)">
+          <a href="javascript:void(0)" class="oneNavA" :data-categoryName="c1.categoryName">{{ c1.categoryName }}</a>
           <div class="twoNav" :style="{ display: currentIndex == index ? 'block' : 'none' }">
             <div class="twoNavList">
                 <dl v-for="(c2,index) in c1.categoryChild" :key="index">
                     <dt>
-                        <a href="">{{c2.categoryName}}</a>
+                        <a href="javascript:void(0)" :data-categoryName="c2.categoryName">{{c2.categoryName}}</a>
                     </dt>
                     <dd>
                         <em v-for="(c3,index) in c2.categoryChild" :key="index">
-                            <a href="">{{c3.categoryName}}</a>
+                            <a href="javascript:void(0)" :data-categoryName="c3.categoryName">{{c3.categoryName}}</a>
                         </em>
                     </dd>
                 </dl>
@@ -50,6 +55,7 @@
         </div>
       </div>
       <Banner></Banner>
+      <Newsflash></Newsflash>
       <div>
       </div>
       <div></div>
@@ -60,6 +66,7 @@
 <script>
 import { getCategories } from "../../utils/api";
 import Banner from "./Banner.vue";
+import Newsflash from "./Newsflash.vue";
 export default {
   name: "TypeVue",
   data() {
@@ -72,6 +79,7 @@ export default {
 
   components: {
     Banner,
+    Newsflash
   },
 
   computed: {},
@@ -99,6 +107,11 @@ export default {
       this.currentIndex = -1;
       console.log(this.isSecondNavShow);
     },
+    goSearch(event){
+        
+        console.log("search..." + event.target.dataset.categoryname)
+        this.$router.push('/search')
+    }
   },
 };
 </script>

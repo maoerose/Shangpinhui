@@ -2,7 +2,7 @@
 <template>
 <div class="banner">
         <!-- <img src="./images/lol英雄联盟至尊 魔女 莫.jpg" alt=""> -->
-    <slider animation="fade" :style="{width: '900px',height: '600px'}">
+    <slider animation="fade" :style="{width: '730px',height: '600px'}">
         <!-- <img src="./images/lol英雄联盟至尊 魔女 莫.jpg" alt=""> -->
         <slider-item v-for="(url,index) in imgList" :key="index">
             <img :src="url" alt="">
