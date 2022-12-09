@@ -1,21 +1,12 @@
 <!--  -->
 <template>
 <div class="banner">
-        <!-- <img src="./images/lol英雄联盟至尊 魔女 莫.jpg" alt=""> -->
-    <slider animation="fade" :style="{width: '730px',height: '600px'}">
-        <!-- <img src="./images/lol英雄联盟至尊 魔女 莫.jpg" alt=""> -->
-        <slider-item v-for="(url,index) in imgList" :key="index">
-            <img :src="url" alt="">
-        </slider-item>
-        <!-- <p v-for="(url,index) in imgList" :key="index">
-            <img :src="url" alt="">
-        </p> -->
-    </slider>
-        <!-- <Splide :options="{ rewind:true }">
-            <SplideSlide v-for="(url,index) in imgList" :key="index">
-                <img :src="url" alt="">
-            </SplideSlide>
-        </Splide> -->
+    <!-- <el-carousel :style="{height:'600px',width:'730px'}"> -->
+    <el-carousel height="550px">
+      <el-carousel-item v-for="item in imgList" :key="item">
+        <img :src="item">
+      </el-carousel-item>
+    </el-carousel>
 </div>
 </template>
 
@@ -45,9 +36,13 @@ export default {
 </script>
 <style lang='less' scoped>
 .banner{
-    img{
-        width: 900px;
-        height: 700px;
+    width: 730px;
+    el-carousel-item{
+        height: 630px;
+        img{
+            width: 900px;
+            height: 600px;
+        }
     }
 }
 </style>
