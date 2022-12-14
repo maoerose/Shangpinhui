@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3801389 */
-  src: url('iconfont.woff2?t=1670578090266') format('woff2'),
-       url('iconfont.woff?t=1670578090266') format('woff'),
-       url('iconfont.ttf?t=1670578090266') format('truetype');
+  src: url('iconfont.woff2?t=1671003227203') format('woff2'),
+       url('iconfont.woff?t=1671003227203') format('woff'),
+       url('iconfont.ttf?t=1671003227203') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-007-clock:before {
+  content: "\e68e";
 }
 
 .icon-gengduo:before {

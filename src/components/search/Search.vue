@@ -3,7 +3,7 @@
     <div class="search">
         <img src="./images/logo.png" alt="">
         <div class="searchInput">
-            <el-input placeholder="请输入内容" class="input-with-select">
+            <el-input placeholder="请输入内容" class="input-with-select" v-model="keywords">
                 <el-button slot="append" class="searchBtn">搜索</el-button>
             </el-input>
         </div>
@@ -15,14 +15,15 @@ export default {
     name: "Search",
     data () {
     return {
-        };
+        keywords:""
+    };
   },
 
     components: {},
 
     // computed: {},
 
-    // mounted() {},
+    mounted() {},
 
     methods: {}
 }

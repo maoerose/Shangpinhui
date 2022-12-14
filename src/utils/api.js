@@ -8,3 +8,4 @@ export function login(params){
 export function getCategories(){
     return http.get('/product/getBaseCategoryList')
 }
+

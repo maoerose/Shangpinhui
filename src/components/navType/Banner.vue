@@ -3,7 +3,7 @@
 <div class="banner">
     <!-- <el-carousel :style="{height:'600px',width:'730px'}"> -->
     <el-carousel height="550px">
-      <el-carousel-item v-for="item in imgList" :key="item">
+      <el-carousel-item v-for="(item,index) in imgList" :key="index">
         <img :src="item.url">
       </el-carousel-item>
     </el-carousel>
@@ -16,15 +16,19 @@ export default {
     data () {
     return {
         imgList:[
-            // 'https://xdao.mypinata.cloud/ipfs/QmaPZHpjvZhuQHBuwAF7ms86QMQPmfCTjoG9B8tEX8ydv2',
-            // 'https://xdao.mypinata.cloud/ipfs/QmfA6GGBKS88sSbH8uYvDtuiipQ4wNaGmyDsmosxWCwAzB'
-            {url:require('./images/lol英雄联盟至尊 魔女 莫.jpg')},
-            {url:require('./images/《卡坦岛VR Catan VR》5.jpg')},
-            {url:require('./images/《奥日与精灵意志(Ori a.jpg')},
-            {url:require('./images/新娘DVA3440x1440带鱼屏.jpg')},
-            {url:require('./images/李白 鸣剑曳影王者荣耀5.jpg')},
-            {url:require('./images/英雄联盟好运姐皮肤5120.jpg')}
-          ]
+            {
+                url:require("./images/lol英雄联盟至尊 魔女 莫.jpg")
+            },
+            {
+                url:require("./images/《卡坦岛VR Catan VR》5.jpg")
+            },            {
+                url:require("./images/《守望先锋》5120x1440游.jpg")
+            },            {
+                url:require("./images/新娘DVA3440x1440带鱼屏.jpg")
+            },            {
+                url:require("./images/李白 鸣剑曳影王者荣耀5.jpg")
+            }
+        ]
         };
   },
 
@@ -32,11 +36,15 @@ export default {
         
      },
 
-    computed: {},
+    computed: {
 
-    mounted() {},
+    },
 
-    methods: {}
+    mounted() {
+    },
+
+    methods: {
+    }
 }
 
 </script>
