@@ -3,12 +3,14 @@
 <div>
     <NavType></NavType>
     <Recommend></Recommend>
+    <Ranklist></Ranklist>
 </div>
 </template>
 
 <script>
 import NavType from '../../components/navType/NavType.vue';
 import Recommend from '../../components/recommend/Recommend.vue';
+import Ranklist from '../../components/ranklist/Ranklist.vue';
 export default {
     name: "Home",
     data () {
@@ -18,7 +20,8 @@ export default {
 
     components: {
         NavType,
-        Recommend
+        Recommend,
+        Ranklist
     },
 
     computed: {},

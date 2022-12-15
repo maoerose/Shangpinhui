@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "563533",
+      "name": "hot",
+      "font_class": "hot",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "24847090",
+      "name": "换一批",
+      "font_class": "huanyipi",
+      "unicode": "e675",
+      "unicode_decimal": 58997
+    },
+    {
       "icon_id": "21225953",
       "name": "时钟",
       "font_class": "007-clock",
