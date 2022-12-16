@@ -4,6 +4,10 @@
     <NavType></NavType>
     <Recommend></Recommend>
     <Ranklist></Ranklist>
+    <Ulike></Ulike>
+    <Floor></Floor>
+    <Floor></Floor>
+    <Brand></Brand>
 </div>
 </template>
 
@@ -11,6 +15,9 @@
 import NavType from '../../components/navType/NavType.vue';
 import Recommend from '../../components/recommend/Recommend.vue';
 import Ranklist from '../../components/ranklist/Ranklist.vue';
+import Ulike from '../../components/ulike/Ulike.vue';
+import Floor from '../../components/floor/Floor.vue';
+import Brand from '../../components/brand/Brand.vue';
 export default {
     name: "Home",
     data () {
@@ -21,7 +28,10 @@ export default {
     components: {
         NavType,
         Recommend,
-        Ranklist
+        Ranklist,
+        Ulike,
+        Floor,
+        Brand
     },
 
     computed: {},
