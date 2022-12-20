@@ -117,6 +117,25 @@ export default {
     .bottom{
         width: 1200px;
         margin: 10px auto;
+        padding: 20px 0;
+        text-align: center;
+        .about{
+            ul{
+                display: flex;
+                justify-content: center;
+                li{
+                    padding: 0 10px;
+                    border-right: #b3b3ae solid 1px;
+                    cursor: pointer;
+                }
+                &>li:last-child{
+                    border: none;
+                }
+            }
+        }
+        .address{
+            margin: 10px 0 40px 0;
+        }
     }
 }
 </style>

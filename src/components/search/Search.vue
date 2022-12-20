@@ -1,10 +1,10 @@
 <!--  -->
 <template>
     <div class="search">
-        <img src="./images/logo.png" alt="">
+        <img src="./images/logo.png" alt="" @click="clickLogo">
         <div class="searchInput">
             <el-input placeholder="请输入内容" class="input-with-select" v-model="keywords">
-                <el-button slot="append" class="searchBtn">搜索</el-button>
+                <el-button slot="append" class="searchBtn" @click="search">搜索</el-button>
             </el-input>
         </div>
     </div>
@@ -25,7 +25,14 @@ export default {
 
     mounted() {},
 
-    methods: {}
+    methods: {
+        clickLogo(){
+            this.$router.push("/")
+        },
+        search(){
+            this.$router.push('/search')
+        }
+    }
 }
 
 </script>
@@ -41,6 +48,7 @@ export default {
         width: 175px;
         height: 56px;
         margin: 30px 0 36px 60px;
+        cursor: pointer;
     }
     .searchInput{
         .input-with-select{

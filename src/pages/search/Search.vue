@@ -1,9 +1,12 @@
 <!--  -->
 <template>
-    <div>我是搜索</div>
+    <div class="searchDetail">
+        <GoodsList></GoodsList>
+    </div>
 </template>
 
 <script>
+import GoodsList from "../../components/goods/GoodsList.vue"
 export default {
     name: "Search",
     data () {
@@ -11,7 +14,9 @@ export default {
         };
   },
 
-    components: {},
+    components: {
+        GoodsList
+    },
 
     computed: {},
 
@@ -22,4 +27,9 @@ export default {
 
 </script>
 <style lang='less' scoped>
+.searchDetail{
+    width: 1200px;
+    margin: 0 auto;
+    // background-color: aquamarine;
+}
 </style>
